@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DOM projects</title>
+  <title> 9gDOM projects</title>
   
 </head>
 <body>
@@ -24,24 +24,31 @@
     console.log('25'- 5);
     console.log('25'+ 5);
     */
+
+    window.document
+    window.console.log('window');
     function handleCostkeydown(event){
        // console.log(event.key);
     if(event.key === 'Enter'){
       calculateTotal();
     }
     }
+    // * Fix = calculate the number in cents and then
+    //      *convert back to dollars at the end.
     function calculateTotal(){
       const inputElement = document.querySelector('.js-cost-input');
-     let cost = Number(inputElement.value);
+
+      // Convert the numbers to cents by * 100.
+     let cost = Number(inputElement.value)*100;
     // console.log(cost);
     // console.log(typeof cost);
 
-      if(cost < 40){
-        cost = cost + 10;
+      if(cost < 4000){
+        cost = cost + 1000;
        // console.log(cost);
       }
 
-      document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+      document.querySelector('.js-total-cost').innerHTML = `$${cost/100}`;
     }
 
     function subscribe() {
@@ -56,6 +63,7 @@
   </script>
   </body>
 </html>
+
 
 
 
