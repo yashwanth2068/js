@@ -63,8 +63,9 @@
     updateScoreElement();
   " class = "reset-score-button">Reset Score</button>
 
-  <script>
-    let score = JSON.parse(localStorage.getItem('score')) || {
+  <script src="10-rock-paper-scissors.js">
+   /*
+   let score = JSON.parse(localStorage.getItem('score')) || {
       wins: 0,
       losses: 0,
       ties: 0
@@ -80,7 +81,7 @@
       };
       
    
-    }*/
+    }
 
     function playGame(playerMove) {
       const computerMove = pickComputerMove();
@@ -148,6 +149,8 @@
         return 'scissors';
       }
     }
+    */
+   
   </script>
 </body>
 </html>
