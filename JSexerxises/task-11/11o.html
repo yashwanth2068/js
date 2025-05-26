@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      let array = ['hello','world','search','good'];
+      let index = -1;
+
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === 'search') {
+          index = i;
+        }
+      }
+
+      console.log(index);
+
+      array = ['not', 'found'];
+      index = -1;
+
+      for (let i = 0; i <array.length; i++) {
+        if (array[i] === 'search') {
+          index = i;
+        }
+      }
+
+      console.log(index);
+     /* if(array === 'search')[
+        console.log(2)
+
+      ]
+      else{
+        console.log(-1);
+      }*/
+    </script>
+  </body>
+</html>

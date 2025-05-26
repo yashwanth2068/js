@@ -14,18 +14,16 @@ function renderTodoList() {
       //destructuring
       //Generating HTML
       const html = `
-      <p>
-      ${name} ${dueDate}
-      
+      <div> ${name}</div>
+      <div>${dueDate}</div>
       <button onclick="
-      todoList.splice(${i},1);
-      renderTodoList();
-      ">Delete</button>
-      </p>
+        todoList.splice(${i},1);
+        renderTodoList();
+      " class="delete-todo-button">Delete</button>
       `;
       todoListHTML += html;
     }
-    console.log(todoListHTML);
+    //console.log(todoListHTML);
 
     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
@@ -36,8 +34,12 @@ function addTodo(){
   const dateInputElement = document.querySelector('.js-due-date-input');
   const dueDate = dateInputElement.value;
   //console.log(name);
-  todoList.push({name: name,dueDate: dueDate;);
-  console.log(todoList);
+  todoList.push({
+    //name: name,
+    //dueDate: dueDate,
+    name,dueDate
+ });
+  //console.log(todoList);
 
   inputElement.value = '';
   renderTodoList();
